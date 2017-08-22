@@ -24,12 +24,18 @@ export default function asyncComponent(importComponent) {
     }
 
     render() {
-      const Component = this.state.component || <div />;
+/*       const Component = this.state.component || <div />;
       return (
         <ReactPlaceholder type="text" rows={7} ready={Component !== null}>
           {Component}
         </ReactPlaceholder>
-      );
+      ); */
+      console.log(this.state.component, 'insided');
+      const config = {
+        Component: this.state.component,
+        props: this.props,
+        holderComponent: 'asyncFunc',
+      };
     }
   }
   return AsyncFunc;
