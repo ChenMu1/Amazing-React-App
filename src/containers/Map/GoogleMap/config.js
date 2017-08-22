@@ -228,11 +228,11 @@ const posts = [
   },
   {
     ID: 4,
-    title: 'Malcom hill',
-    location: 'Malcom X, NY',
+    title: 'Meow',
+    location: 'Edward Street, Wellington',
     img: infoWindowImg4,
-    lat: 40.809657,
-    lng: -73.944201,
+    lat: -41.290678,
+    lng: 174.774778,
     marker: {
       borderStyle: 'double',
       borderColor: 'yellow',

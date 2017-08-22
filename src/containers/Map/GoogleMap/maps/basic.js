@@ -14,7 +14,7 @@ class BasicMap extends Component {
     this.childClick = this.childClick.bind(this);
     this.closeInfoWindow = this.closeInfoWindow.bind(this);
     this.state = {
-      center: [40.78306, -73.971249], // 40.783060, -73.971249
+      center: [-41.2865, 174.7762], // 40.783060, -73.971249
       zoom: 13,
       posts,
       infoWindow: null,
@@ -96,7 +96,7 @@ class BasicMap extends Component {
 
 function mapStateToProps(state) {
   return {
-    center: { lat: 40.78306, lng: -73.971249 }, // 40.783060, -73.971249
+    center: { lat: -41.2865, lng:  174.7762 }, // 40.783060, -73.971249
     zoom: 13,
   };
 }
