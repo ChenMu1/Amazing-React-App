@@ -1,0 +1,80 @@
+.isoVoiceSearch {
+  width: 100%;
+  // height: 46px;
+  padding: 10px 15px;
+  display: flex;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  border: 1px solid @isoColor--Border;
+  .isoBorderRadius(3px);
+
+  div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid @isoColor--Border;
+    .isoBorderRadius(50%);
+    .isoTransition;
+
+    &:before {
+      content: '';
+      font-size: @isoFontSize + 3;
+      font-family: 'ionicons';
+      color: @isoColor--GreyShade;
+      -webkit-transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -moz-transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -ms-transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -o-transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    &:hover {
+      border-color: @primary-color;
+
+      &:before {
+        color: @primary-color;
+      }
+    }
+  }
+
+  span {
+    font-size: @isoFontSize;
+    font-weight: 400;
+    color: @isoColor--GreyDark;
+    line-height: 1.4;
+    margin-left: 10px;
+  }
+
+  .isoVoiceSearchStart {
+    button {
+      &:before {
+        content: '\f2ec';
+      }
+    }
+  }
+
+  .isoVoiceSearchRunning {
+    button {
+      border-color: @primary-color;
+
+      &:before {
+        content: '\f24f';
+        color: @primary-color;
+        font-size: @isoFontSize - 1;
+      }
+    }
+  }
+}

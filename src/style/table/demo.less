@@ -1,0 +1,29 @@
+/* * * * * * * * * * * * * * * * * * * * *
+ANT TABLE
+* * * * * * * * * * * * * * * * * * * * */
+.isoLayoutContentWrapper{
+  .isoLayoutContent{
+    width: 100%;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid @isoColor--Border;
+
+    .ant-tabs-content{
+      margin-top: 40px;
+    }
+
+    .ant-tabs-nav {
+      > div{
+        color: @isoColor--LightBlue;
+
+        &.ant-tabs-ink-bar{
+          background-color: @primary-color
+        }
+
+        &.ant-tabs-tab-active{
+          color: @primary-color;
+        }
+      }
+    }
+  }
+}

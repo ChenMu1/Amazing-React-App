@@ -1,0 +1,68 @@
+/* * * * * * * * * * * * * * * * * * * * *
+              VCARD
+* * * * * * * * * * * * * * * * * * * * */
+.isoVCardWidgetWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  border: 1px solid @isoColor--BorderAlt;
+  padding: 50px 30px 30px;
+
+  .isoVCardImage{
+    width: 70px;
+    height: 70px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 35px;
+    .isoBorderRadius(50%);
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .isoVCardBody{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+
+    .isoName{
+      font-size: @isoFontSize + 3;
+      color: @isoColor--GreyDarker;
+      font-weight: 400;
+      margin: 0 0 5px;
+      line-height: 1.2;
+    }
+
+    .isoDesgTitle{
+      font-size: @isoFontSize - 1;
+      color: @isoColor--GreyDark;
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .isoDescription{
+      font-size: @isoFontSize - 1;
+      color: @isoColor--GreyDark;
+      font-weight: 400;
+      margin: 20px 0 0 0;
+      line-height: 1.5;
+    }
+
+    .isoSocialWidgetWrapper{
+      margin-top: 25px;
+    }
+  }
+}

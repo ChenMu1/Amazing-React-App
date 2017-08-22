@@ -1,0 +1,47 @@
+/* * * * * * * * * * * * * * * * * * * * *
+Progress
+* * * * * * * * * * * * * * * * * * * * */
+.ant-progress{
+  &.ant-progress-line {
+    width: 100%;
+    font-size: @isoFontSize - 1;
+    color: @isoColor--GreyDarkText;
+    position: relative;
+  }
+
+  &.ant-progress-status-exception{
+    .ant-progress-bg {
+      background-color: @error-color;
+    }
+  }
+
+  &.ant-progress-status-success {
+    .ant-progress-bg {
+      background-color: @success-color;
+    }
+  }
+
+  &.ant-progress-circle .ant-progress-text {
+    font-family: @isoFontFamily;
+    color: @isoColor--GreyDarkText;
+  }
+}
+
+.isoProgressControl{
+  margin-top: 10px;
+  
+  .ant-btn{
+    border: 1px solid @isoColor--Border;
+    .isoTransition;
+
+    &:focus{
+      border-color: @primary-color;
+      outline: 0;
+      box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+    }
+
+    &:hover{
+      border-color: @primary-color;
+    }
+  }
+}

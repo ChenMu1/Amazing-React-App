@@ -1,0 +1,143 @@
+/* * * * * * * * * * * * * * * * * *
+CONTACT LIST
+* * * * * * * * * * * * * * * * * */
+.isoContactListWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .isoSearchBar {
+    input {
+      width: 100%;
+      font-size: 14px;
+      font-weight: 400;
+      color: @isoColor--GreyDarker;
+      line-height: inherit;
+      height: 69px;
+      padding: 0 20px;
+      border: 0;
+      border-bottom: 1px solid @isoColor--Border;
+      outline: 0 !important;
+      overflow: hidden;
+      background-color: #ffffff;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      border-radius: 0;
+      box-shadow: none;
+      transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      @media only screen and (max-width: 767px) {
+        height: 50px;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: @isoColor--Border;
+      }
+    }
+  }
+
+  .ant-input-suffix {
+    right: 10px;
+    color: @isoColor--GreyShade;
+  }
+
+  .isoContactList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+
+    .isoSingleContact {
+      width: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      padding: 15px 20px;
+      padding-right: 35px;
+      border-bottom: 1px solid @isoColor--Border;
+      text-align: left;
+      position: relative;
+      cursor: pointer;
+
+      &.active {
+        background-color: @isoColor--LightBluish;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .isoAvatar {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+        overflow: hidden;
+        .isoBorderRadius(50%);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .isoNoteText {
+        width: calc(~"100% - 60px");
+        margin-right: 20px;
+        padding: 20px 0;
+        cursor: pointer;
+
+        h3 {
+          width: 100%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: @isoColor--LightBlue;
+          font-weight: 500;
+        }
+
+        .isoNoteCreatedDate {
+          font-size: @isoFontSize - 1;
+          color: @isoColor--GreyShade;
+        }
+      }
+
+      .isoDeleteBtn {
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        flex-shrink: 0;
+        position: absolute;
+        top: 20px;
+        right: 5px;
+        padding: 0;
+        border: 0;
+        font-size: 14px;
+        color: @isoColor--GreyShade;
+        .isoTransition;
+
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+
+    .isoNotlistNotice {
+      font-size: 14px;
+      font-weight: 400;
+      color: @isoColor--GreyShade;
+      line-height: inherit;
+      padding: 30px 0;
+    }
+  }
+}

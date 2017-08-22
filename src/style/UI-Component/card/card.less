@@ -1,0 +1,63 @@
+/* * * * * * * * * * * * * * * * * *
+CARD
+* * * * * * * * * * * * * * * * * */
+.ant-card{
+  .ant-card-head{
+    background-color: @isoColor--GreyLighten;
+    border-bottom: 1px solid @isoColor--Border;
+    
+    .ant-card-head-title{
+      color: @isoColor--GreyDarker;
+    }
+  }
+
+  .ant-card-extra{
+    a{
+      color: @primary-color;
+      text-decoration: none;
+
+      &:focus{
+        text-decoration: none;
+      }
+    }
+  }
+
+  .ant-card-body{
+    p{
+      font-size: @isoFontSize - 1;
+      color: @isoColor--GreyText;
+      line-height: 1.5;
+      margin-bottom: 14px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.ant-card-bordered{
+    border: 1px solid @isoColor--Border;
+
+    .ant-card-head{
+      border-bottom: 1px solid @isoColor--Border;
+    }
+  }
+
+  &.ant-card-loading{
+    .ant-card-body{
+      p{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .custom-card{
+    h3{
+      color: @isoColor--GreyDarkText;
+      font-weight: 500;
+    }
+    p{
+      color: @isoColor--GreyShade;
+    }
+  }
+}

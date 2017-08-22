@@ -1,0 +1,104 @@
+/* * * * * * * * * * * * * * *
+ALL VARIABLE & MIXING
+* * * * * * * * * * * * * * */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+@isoFontFamily: 'Roboto', sans-serif;
+@isoFontSize: 14px;
+
+//  Colors
+@isoColor--GreyDarker: #323332;
+@isoColor--GreyDark: #979797;
+@isoColor--GreyText: #797979;
+@isoColor--GreyDarkText: #595959;
+@isoColor--GreyShade: #bababa;
+@isoColor--GreyTextLight: #c1c1c1;
+@isoColor--Grey: #D8D8D8;
+@isoColor--GreyAlt: #f1f1f1;
+@isoColor--GreyLight: #F3F3F3;
+@isoColor--GreyLighten: #fafafa;
+@isoColor--GreyLighter: #F9F9F9;
+
+@primary-color : #4482FF;
+@info-color : @primary-color;
+@success-colorALt : #00b16a;
+@success-color : #00b16a;
+@error-color : #f64744;
+@highlight-color : @error-color;
+@warning-color : #ffbf00;
+@normal-color : #e6e6e6;
+
+@isoColor--Blue: #42A5F5;
+
+@isoColor--Cyan: #30C5FF;
+@isoColor--LimeGreen: #7ED321;
+@isoColor--CyanGreen #10CFBD;
+@isoColor--Orange: #FEAC01;
+@isoColor--Yellow: #FFCA28;
+@isoColor--Pink: #F75D81;
+@isoColor--PurpleDark: #42299a;
+@isoColor--Purple: #511E78;
+@isoColor--PurpleLight: #7266BA;
+@isoColor--DarkBlue: #2d3446;
+@isoColor--DarkerBlue: #2b303b;
+@isoColor--DarkestBlue: #272d3d;
+@isoColor--BlueShade: #39435f;
+@isoColor--BlueShadeDark: #233B6E;
+@isoColor--BlueShadeLIght: #415F9D;
+@isoColor--LightBlue: #788195;
+@isoColor--LightBluish: #f1f3f6;
+@isoColor--LighterBluish: #f5f6f8;
+@isoColor--DarkBluish: #e9ebf1;
+
+// @isoColor--Border: rgba(228, 228, 228, 0.65);
+@isoColor--Border: #e9e9e9;
+@isoColor--BorderDark: #d8d8d8;
+@isoColor--BorderAlt: #ebebeb;
+
+@chart1 : #01C0C8;
+@chart1Light : #66D9DE;
+
+@chart2 : #48A6F2;
+@chart2Light : #C8E4FB;
+@chart2RGBA : rgba(72,166,242,1);
+
+@chart3 : #ff6384;
+@chart3Light : #ffa1b5;
+@chart3RGBA : rgba(255,99,132,1);
+
+@chart4 : #42299a;
+
+@chart5 : #511E78;
+@chart5Light : #9678AE;
+@chart5RGBA : rgba(81,30,120,1);
+
+@chart6 : #00b16a;
+@chart6Light : #66D0A5;
+
+@chart7 : #ffbf00;
+@chart7Light : #FFD866;
+@chart7RGBA : rgba(255, 191, 0, 1);
+
+// MIXINS
+.isoTransition (@time: 0.3s, @prop: all, @tran: cubic-bezier(0.215, 0.61, 0.355, 1)) {
+  -webkit-transition: @prop @time @tran;
+  -moz-transition: @prop @time @tran;
+  -ms-transition: @prop @time @tran;
+  -o-transition: @prop @time @tran;
+  transition: @prop @time @tran;
+}
+
+// BORDER RADIUS
+.isoBorderRadius (@radius : 5px 5px 5px 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// DROP SHADOW
+.isoBoxShadow (@values) {
+  -webkit-box-shadow: @values;
+  -moz-box-shadow: @values;
+  box-shadow: @values;
+}

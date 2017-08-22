@@ -1,0 +1,84 @@
+.isoOrderInfo {
+  .isoOrderTable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .isoOrderTableHead {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .tableHead {
+        font-size: @isoFontSize + 1;
+        font-weight: 500;
+        color: @isoColor--GreyDarker;
+        line-height: 1.2;
+      }
+    }
+
+    .isoOrderTableBody {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      .isoSingleOrderInfo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid @isoColor--Border;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        p {
+          font-size: @isoFontSize - 1;
+          font-weight: 400;
+          color: @isoColor--GreyDark;
+          line-height: 1.5;
+          padding-right: 25px;
+
+          span {
+            font-size: @isoFontSize - 1;
+            font-weight: 400;
+            color: @isoColor--GreyDarkText;
+            line-height: 1.5;
+          }
+        }
+
+        .totalPrice {
+          font-size: @isoFontSize - 1;
+          font-weight: 500;
+          color: @isoColor--GreyDark;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .isoOrderTableFooter {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+
+      span {
+        font-size: @isoFontSize;
+        font-weight: 500;
+        color: @isoColor--GreyDarker;
+        line-height: 1.2;
+      }
+    }
+
+    button {
+      height: 42px;
+      .isoBorderRadius(2px);
+    }
+  }
+}

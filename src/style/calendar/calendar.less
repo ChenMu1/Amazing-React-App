@@ -1,0 +1,62 @@
+/* * * * * * * * * * * * * * * * * * *
+CALENDAR
+* * * * * * * * * * * * * * * * * * */
+@import './styles.less';
+@import './prism.less';
+.isomorphicCalendarWrapper {
+  position: relative;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background: @isoColor--LightBluish;
+  @media(max-width : 767px){
+    padding: 0px;
+  }
+
+  .isomorphicCalendar{
+    height: 100vh;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    flex-shrink: 0;
+    border: 1px solid @isoColor--Border;
+  }
+}
+
+.isoCalendarInputWrapper{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.isoCalendarDatePicker{
+  display: flex;
+
+  .ant-calendar-picker{
+    width: calc(~"100% - 35px") !important;
+
+    .ant-input{
+      .isoBorderRadius(4px 0 0 4px);
+    }
+
+    &:hover{
+      z-index: 1;
+    }
+  }
+
+  .isoDeleteBtn{
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    flex-shrink: 0;
+    margin-left: -1px;
+    align-items: center;
+    justify-content: center;
+    .isoBorderRadius(0 4px 4px 0);
+
+    &:hover{
+      z-index: 1;
+    }
+  }
+}

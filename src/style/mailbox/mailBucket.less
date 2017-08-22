@@ -1,0 +1,52 @@
+/* * * * * * * * * * *
+Mail Options
+* * * * * * * * * * */
+.isoBucketList{
+  padding: 35px 0 0;
+
+  .isoSingleBucket{
+    width: 100%;
+    display: flex;
+    padding: 0 30px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+
+    span{
+      font-size: @isoFontSize;
+      font-weight: 400;
+      color: @isoColor--LightBlue;
+      cursor: pointer;
+      text-transform: capitalize;
+      line-height: 1.1;
+      .isoTransition;
+    }
+
+    .isoMailBadge{
+      font-size: @isoFontSize - 2;
+      font-weight: 500;
+      color: @isoColor--LightBlue;
+      line-height: normal;
+      margin-left: auto;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flex;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &.active{
+      span:not(.isoMailBadge){
+        font-weight: 500;
+        color: @primary-color;
+      }
+    }
+
+    span:not(.isoMailBadge){
+      &:hover{
+        color: @primary-color;
+      }
+    }
+  }
+}

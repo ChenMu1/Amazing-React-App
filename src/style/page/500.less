@@ -1,0 +1,123 @@
+/* * * * * * * * * * * * * * * * * *
+            500 Page
+* * * * * * * * * * * * * * * * * */
+.iso500Page{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media only screen and (max-width: 767px){
+    flex-direction: column;
+  }
+
+  .iso500Content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+
+    @media only screen and (max-width: 767px){
+      order: 2;
+      margin-top: 20px;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1{
+      font-family: @isoFontFamily;
+      font-size: @isoFontSize * 6;
+      font-weight: 700;
+      color: @isoColor--LightBlue;
+      line-height: 1;
+      margin: 0 0 25px;
+    }
+
+    h3{
+      font-family: @isoFontFamily;
+      font-size: @isoFontSize + 10;
+      font-weight:400;
+      color: @isoColor--GreyDarkText;
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+
+    p{
+      font-family: @isoFontFamily;
+      font-size: @isoFontSize;
+      font-weight: 400;
+      color: @isoColor--GreyDark;
+      margin: 0 0 10px;
+    }
+
+    button{
+      display: inline-block;
+      margin-top: 15px;
+      margin-bottom: 0;
+      font-weight: 500;
+      text-align: center;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      cursor: pointer;
+      background-image: none;
+      border: 0;
+      white-space: nowrap;
+      line-height: 1.5;
+      padding: 0 30px;
+      font-size: @isoFontSize - 1;
+      border-radius: 18px;
+      height: 36px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      position: relative;
+      color: #ffffff;
+      background-color: @primary-color;
+      .isoTransition;
+
+      a{
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      &:hover{
+        background-color: darken(@primary-color, 5%);
+
+        a{
+          text-decoration: none;
+        }
+      }
+
+      &:focus{
+        outline: 0;
+        box-shadow: none;
+
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .iso500Artwork{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    height: 500px;
+
+    @media only screen and (max-width: 767px){
+      margin-left: 0;
+    }
+
+    img{
+      max-height: 100%;
+    }
+  }
+}

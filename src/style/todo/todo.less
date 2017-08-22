@@ -1,0 +1,81 @@
+/* * * * * * * * * * * * * * * *
+TODO
+* * * * * * * * * * * * * * * */
+.isomorphicTodoComponent{
+  padding: 50px 35px;
+  // height: 100%;
+
+  @media only screen and (max-width: 767px){
+    padding: 30px 20px;
+  }
+
+  @media only screen and (min-width: 767px) and (max-width: 990px){
+    padding: 40px 20px;
+  }
+
+  .isoTodoHeader{
+    height: auto;
+    line-height: inherit;
+    padding: 0;
+    margin-bottom: 40px;
+    background: none;
+
+    @media only screen and (max-width: 767px){
+      margin-bottom: 20px;  
+    }
+
+    .isoTodoInput{
+      font-size: 14px;
+      font-weight: 400;
+      color: @isoColor--GreyDark;
+      line-height: inherit;
+      height: 50px;
+      padding: 0 15px;
+      margin: 0;
+      border: 1px solid @isoColor--Border;
+      outline: 0 !important;
+      overflow: hidden;
+      background-color: #ffffff;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      box-shadow: none;
+      .isoTransition;
+
+      &:focus{
+        border-color: @primary-color;
+        outline: 0;
+        box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+      }
+
+      &:hover{
+        border-color: @primary-color;
+      }
+
+      &::-webkit-input-placeholder {
+        color:@isoColor--GreyShade;
+      }
+
+      &:-moz-placeholder {
+        color:@isoColor--GreyShade;
+      }
+
+      &::-moz-placeholder {
+        color:@isoColor--GreyShade;
+      }
+      &:-ms-input-placeholder {
+        color:@isoColor--GreyShade;
+      }
+    }
+  }
+
+  .isoTodoContentBody{
+    width: 100%;
+
+    @import './todoList.less';
+  }
+}

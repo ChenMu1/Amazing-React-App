@@ -1,0 +1,50 @@
+/* * * * * * * * * * * * * * * * * * * * *
+COMMON CHART STYLES
+* * * * * * * * * * * * * * * * * * * * */
+@import '../base.less';
+
+.isoChartWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .isoChartControl{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 20px;
+
+    span{
+      font-size: 13px;
+      color: #595959;
+      font-weight: 400;
+      margin-right: 15px;
+    }
+
+    button{
+      border: 1px solid @isoColor--Border;
+      padding: 0 10px;
+      background-color: transparent;
+      border-radius: 0;
+      color: @isoColor--LightBlue;
+      position: relative;
+
+      &:last-child{
+        margin-left: -1px;
+      }
+
+      &:hover{
+        color: @primary-color;
+        border-color: @primary-color;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.isoMapPage{
+  .isoExampleWrapper{
+    // overflow-y: hidden;
+    // overflow-x: auto;
+  }
+}

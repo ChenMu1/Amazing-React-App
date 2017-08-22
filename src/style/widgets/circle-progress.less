@@ -1,0 +1,26 @@
+.isoCircleProgress{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  h3{
+    font-family: @isoFontFamily;
+    font-size: @isoFontSize;
+    font-weight: 500;
+    line-height: 1.2;
+    color: @isoColor--GreyDark;
+    margin: 15px 0 0;
+  }
+
+  .ant-progress.ant-progress-circle{
+    .ant-progress-text{
+      font-family: @isoFontFamily;
+      font-size: @isoFontSize + 4;
+      font-weight: 400;
+      line-height: 1.2;
+      color: @isoColor--GreyText;
+    }
+  }
+}

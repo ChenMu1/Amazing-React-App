@@ -1,0 +1,29 @@
+.rdw-editor-toolbar{
+  margin-bottom: 0;
+  /*border: 1px solid rgba(41, 41, 41, 0.125);*/
+  border: 1px solid rgba(228, 228, 228, 0.65);
+  border-bottom: 0;
+  -webkit-border-radius: 2px 2px 0 0;
+  -moz-border-radius: 2px 2px 0 0;
+  -o-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.DraftEditor-editorContainer{
+  font-size: 14px;
+  font-weight: 400;
+  color: #252424;
+  line-height: inherit;
+  /*border: 1px solid rgba(41, 41, 41, 0.125);*/
+  border: 1px solid rgba(228, 228, 228, 0.65);
+  min-height: 160px;
+  padding: 15px 10px;
+  -webkit-border-radius: 0 0 2px 2px;
+  -moz-border-radius: 0 0 2px 2px;
+  -o-border-radius: 0 0 2px 2px;
+  border-radius: 0 0 2px 2px;
+}
+
+.public-DraftStyleDefault-block{
+  margin: 0 0 10px;
+}

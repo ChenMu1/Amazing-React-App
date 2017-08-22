@@ -1,0 +1,226 @@
+/* * * * * * * * * * * * * * * * * * * * *
+INVOICE
+* * * * * * * * * * * * * * * * * * * * */
+.isoInvoicePageWrapper{
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 767px){
+    padding: 30px 20px;
+  }
+
+  .isoLeftSideContent{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .isoRightSideContent{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: right;
+
+    @media only screen and (max-width: 767px){
+      align-items: flex-start;
+      margin-top: 15px;
+    }
+  }
+
+  .isoTitle{
+    font-size: @isoFontSize + 2;
+    font-weight: 500;
+    color: @isoColor--GreyDarker;
+    margin: 0 0 20px;
+    line-height: 1;
+  }
+
+  .isoPageHeader{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .isoPageTitle{
+      font-size: @isoFontSize + 10;
+      font-weight: 500;
+      color: @isoColor--DarkBlue;
+      margin: 0 20px 0 0;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  .isoPageContent{
+    width: 100%;
+    padding: 50px;
+    background-color: #ffffff;
+    border: 1px solid @isoColor--Border;
+
+    @media only screen and (max-width: 767px){
+      padding: 30px 20px;
+    }
+
+
+    .isoOrderInfo{
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      border-bottom: 1px dashed #ddd;
+
+      .isoInvoiceNumber{
+        font-size: @isoFontSize + 4;
+        font-weight: 400;
+        color: @primary-color;
+        margin: 0;
+      }
+
+      .isoRightSideContent{
+        p{
+          font-size: @isoFontSize;
+          color: @isoColor--GreyDarkText;
+          margin: 0 0 5px;
+
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .isoBillingInformation{
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-top: 50px;
+      margin-bottom: 80px;
+
+      .isoLeftSideContent,
+      .isoRightSideContent{
+        width: 50%;
+
+        @media only screen and (max-width: 767px){
+          width: 100%;
+
+          &.isoRightSideContent{
+            margin-top: 30px;
+            text-align: left;
+          }
+        }
+
+        .isoTitle{
+          margin-bottom: 25px;
+        }
+
+        .isoNameEmail{
+          margin: 0 0 20px;
+
+          .isoName{
+            font-size: @isoFontSize + 1;
+            color: @isoColor--GreyText;
+            font-weight: 400;
+            display: block;
+          }
+
+          .isoEmail{
+            font-size: @isoFontSize;
+            color: @isoColor--GreyText;
+            font-weight: 300;
+          }
+        }
+
+        address{
+          font-size: @isoFontSize;
+          color: @isoColor--GreyText;
+          font-weight: 300;
+          font-style: normal;
+        }
+      }
+    }
+
+    .isoInvoiceTable{
+      .isoSimpleTable .ant-table-thead > tr > th{
+        color: @isoColor--GreyDarker;
+        text-align: right;
+
+        &.itemName{
+          text-align: left;
+        }
+      }
+
+      .isoSimpleTable .ant-table-tbody > tr > td{
+        font-size: @isoFontSize - 1;
+        color: @isoColor--GreyDark;
+        text-align: right;
+
+        &.itemName{
+          text-align: left;
+        }
+      }
+
+      .isoTotalBill{
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        align-items: flex-end;
+        text-align: right;
+        flex-direction: column;
+        padding-right: 15px;
+
+        p{
+          font-size: @isoFontSize;
+          color: @isoColor--LightBlue;
+          margin-bottom: 10px;
+          width: 250px;
+          display: flex;
+          justify-content: flex-end;
+          text-align: right;
+
+          span{
+            width: 120px;
+          }
+        }
+
+        h3{
+          font-size: @isoFontSize + 4;
+          color: @isoColor--GreyDarker;
+          margin: 0;
+          font-weight: 400;
+          width: 250px;
+          display: flex;
+          justify-content: flex-end;
+          text-align: right;
+
+          span{
+            width: 120px;
+          }
+        }
+      }
+    }
+
+    .isoButtonWrapper{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 40px;
+
+      button{
+        margin-right: 5px;
+
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}

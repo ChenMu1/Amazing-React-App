@@ -1,0 +1,234 @@
+/* * * * * * * * * * * * * * * * * *
+CONTACT BOX
+* * * * * * * * * * * * * * * * * */
+.isoContactBox {
+  width: 100%;
+  height: 100%;
+
+  // CONTACT INFO
+  .isoContactCard {
+    width: 100%;
+    height: calc(~"100% - 145px");
+    // overflow-y: auto;
+    padding: 0 35px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 0 20px;
+    }
+
+    @media only screen and (min-width: 767px) and (max-width: 990px) {
+      flex-direction: column;
+    }
+
+    .isoContactCardHead {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 120px;
+      flex-shrink: 0;
+      margin-right: 50px;
+      flex-shrink: 0;
+
+      @media only screen and (max-width: 600px) {
+        margin-bottom: 20px;
+      }
+
+      @media only screen and (min-width: 767px) and (max-width: 990px) {
+        margin-bottom: 20px;
+      }
+
+      .isoPersonImage {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        overflow: hidden;
+        .isoBorderRadius(5px);
+
+        .avatar-uploader {
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .isoPersonName {
+        font-size: @isoFontSize + 1;
+        font-weight: 500;
+        color: @isoColor--GreyDarker;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+
+    .isoContactInfoWrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .isoContactCardInfos {
+        width: 100%;
+        display: flex;
+        flex-shrink: 0;
+        align-items: baseline;
+        flex-direction: row;
+        margin-bottom: 15px;
+
+        @media only screen and (max-width: 430px) {
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+
+        .isoInfoLabel {
+          font-size: @isoFontSize;
+          font-weight: 500;
+          color: @isoColor--GreyDarker;
+          line-height: 1.5;
+          margin: 0;
+          margin-right: 15px;
+          text-align: left;
+          min-width: 80px;
+          position: relative;
+
+          @media only screen and (max-width: 430px) {
+            margin-bottom: 5px;
+            margin-right: 0;
+            padding-right: 10px;
+            min-width: 0;
+          }
+
+          &::after {
+            content: ':';
+            position: absolute;
+            right: 0;
+          }
+        }
+
+        .isoInfoDetails {
+          font-size: @isoFontSize;
+          font-weight: 400;
+          color: @isoColor--GreyDark;
+          line-height: 1.5;
+          margin: 0;
+          text-align: left;
+        }
+
+        input {
+          font-size: 14px;
+          font-weight: 400;
+          color: @isoColor--GreyDark;
+          line-height: inherit;
+          height: 36px;
+          padding: 0 15px;
+          margin: 0;
+          border: 1px solid @isoColor--Border;
+          outline: 0 !important;
+          overflow: hidden;
+          background-color: #ffffff;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          -o-border-radius: 3px;
+          border-radius: 3px;
+          box-shadow: none;
+          .isoTransition;
+
+          // &:focus,
+          // &:hover{
+          //   border-color: @isoColor--Border;
+          //   box-shadow: none;
+          // }
+
+          &:focus {
+            border-color: @primary-color;
+            outline: 0;
+            box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+          }
+
+          &:hover {
+            border-color: @primary-color;
+          }
+
+          &::-webkit-input-placeholder {
+            color: @isoColor--GreyShade;
+          }
+
+          &:-moz-placeholder {
+            color: @isoColor--GreyShade;
+          }
+
+          &::-moz-placeholder {
+            color: @isoColor--GreyShade;
+          }
+          &:-ms-input-placeholder {
+            color: @isoColor--GreyShade;
+          }
+        }
+
+        textarea {
+          font-size: 14px;
+          font-weight: 400;
+          color: @isoColor--GreyDark;
+          line-height: 24px;
+          height: 210px;
+          padding: 10px 15px;
+          margin: 0;
+          border: 1px solid @isoColor--Border;
+          outline: 0 !important;
+          background-color: #ffffff;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          -o-border-radius: 3px;
+          border-radius: 3px;
+          box-shadow: none;
+          .isoTransition;
+
+          &:focus {
+            border-color: @primary-color;
+            outline: 0;
+            box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+          }
+
+          &:hover {
+            border-color: @primary-color;
+          }
+
+          &::-webkit-input-placeholder {
+            color: @isoColor--GreyShade;
+          }
+
+          &:-moz-placeholder {
+            color: @isoColor--GreyShade;
+          }
+
+          &::-moz-placeholder {
+            color: @isoColor--GreyShade;
+          }
+          &:-ms-input-placeholder {
+            color: @isoColor--GreyShade;
+          }
+        }
+      }
+    }
+  }
+}

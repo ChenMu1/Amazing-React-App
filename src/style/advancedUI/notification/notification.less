@@ -1,0 +1,33 @@
+/* * * * * * * * * * * * * * * * * * * * *
+NOTIFICATION
+* * * * * * * * * * * * * * * * * * * * */
+.ant-notification-notice {
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  line-height: 1.5;
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  .ant-notification-notice-message {
+    font-size: @isoFontSize - 1;
+    color: @isoColor--GreyDarker;
+    font-weight: 500;
+    margin-bottom: 7px;
+    line-height: 20px;
+    display: inline-block;
+  }
+
+  .ant-notification-notice-description{
+    font-size: @isoFontSize - 2;
+    color: @isoColor--GreyDarkText;
+  }
+
+  .ant-notification-notice-with-icon{
+    .ant-notification-notice-icon-error{
+      color: @error-color;
+    }
+  }
+}

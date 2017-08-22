@@ -1,0 +1,31 @@
+/* * * * * * * * * * * * * * * * * * * * *
+MESSAGE
+* * * * * * * * * * * * * * * * * * * * */
+.ant-message {
+  .ant-message-notice-content {
+    padding: 12px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    display: inline-block;
+    pointer-events: all;
+
+    .ant-message-custom-content{
+      font-size: @isoFontSize - 1;
+      color: @isoColor--GreyDarkText;
+
+      .anticon {
+        margin-right: 8px;
+        font-size: @isoFontSize + 1;
+        top: 1px;
+        position: relative;
+      }
+
+      &.ant-message-error{
+        .anticon{
+          color: @error-color;
+        }
+      }
+    }
+  }
+}

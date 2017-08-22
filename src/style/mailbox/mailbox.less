@@ -1,0 +1,206 @@
+/* * * * * * * * * * * * * * * * * * * *
+MAILBOX
+* * * * * * * * * * * * * * * * * * * */
+.isomorphicMailBox{
+  width: 100%;
+  height: calc(~"100vh - 137px");
+  display: flex;
+
+  @media only screen and (max-width: 767px){
+    height: calc(~"100vh - 110px");
+  }
+
+  .isoLeftWrapper{
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-right: 1px solid rgba(228, 228, 228, 0.65);
+    width: 250px;
+
+    .isoMailOptions{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    @import './composeBtn.less';
+    @import './mailBucket.less';
+    @import './mailTag.less';
+  }
+
+  .isoMiddleWrapper{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border-right: 1px solid rgba(228, 228, 228, 0.65);
+    width: 400px;
+
+    @media only screen and (max-width: 767px){
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 767px) and (max-width: 990px){
+      width: 320px;
+    }
+
+    @media only screen and (min-width: 991px) and (max-width: 1366px){
+      width: 340px;
+    }
+
+    .isoBucketLabel{
+      width: 100%;
+      height: 80px;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 30px;
+      background-color: @isoColor--GreyLighter;
+      border-bottom: 1px solid @isoColor--Border;
+
+      h3{
+        font-size: @isoFontSize + 2;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: @isoColor--LightBlue;
+        line-height: 1.1;
+      }
+
+      @media only screen and (max-width: 767px){
+        height: 60px;
+        padding: 0 20px;
+      }
+    }
+
+    .isoSearchMailWrapper{
+      width: 100%;
+      height: 40px;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: space-between;
+      background-color: @isoColor--GreyLighter;
+      border-bottom: 1px solid @isoColor--Border;
+
+      input{
+        font-size: 14px;
+        font-weight: 400;
+        color: @isoColor--GreyDark;
+        line-height: inherit;
+        height: 39px;
+        width: 100%;
+        padding: 0 30px;
+        margin-bottom: 0;
+        border: 0;
+        outline: 0 !important;
+        overflow: hidden;
+        background-color: @isoColor--GreyLighter;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+        box-shadow: none;
+        -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+           -moz-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+            -ms-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+             -o-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+                transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        &:focus,
+        &:hover{
+          border-color: transparent;
+          box-shadow: none;
+        }
+
+        @media only screen and (max-width: 767px){
+          padding: 0 20px;
+        }
+
+        &::-webkit-input-placeholder {
+          color: @isoColor--GreyShade;
+        }
+
+        &:-moz-placeholder {
+          color: @isoColor--GreyShade;
+        }
+
+        &::-moz-placeholder {
+          color: @isoColor--GreyShade;
+        }
+        &:-ms-input-placeholder {
+          color: @isoColor--GreyShade;
+        }
+      }
+
+      .ant-input-suffix{
+        display: none;
+      }
+    }
+
+    @import './mailList.less';
+  }
+
+  .isoSingleMailWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+
+    .isoNoMailMsg{
+      font-size: @isoFontSize * 2;
+      font-weight: 300;
+      text-transform: capitalize;
+      color: @isoColor--GreyDark;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @import './singleMail.less';
+  }
+
+
+  .isoBackCatBtn{
+    font-size: @isoFontSize;
+    color: @isoColor--DarkBlue;
+    height: 35px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    outline: 0;
+    border: 1px solid @isoColor--Border;
+    cursor: pointer;
+    .isoTransition;
+
+    i{
+      font-size: @isoFontSize + 6;
+      color: @isoColor--DarkBlue;
+      .isoTransition;
+    }
+
+    &:hover{
+      color: @primary-color;
+      background-color: darken(#ffffff, 1%);
+
+      i{
+        color: @primary-color;
+      }
+    }
+  }
+}
+
+@import "./pagination.less";
+@import "./composeMail.less";
+@import "./singleMailAction.less";
+@import "./mail-drawer.less";

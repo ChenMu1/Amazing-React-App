@@ -1,0 +1,216 @@
+/* * * * * * * * * * *
+Sidebar Styling
+* * * * * * * * * * */
+.isomorphicSidebarWrapper {
+  // z-index: 1001;
+}
+
+.isomorphicSidebar {
+  z-index: 1000;
+  background: @isoColor--DarkBlue;
+  width: 280px;
+  flex: 0 0 280px;
+
+  @media only screen and (max-width: 767px) {
+    width: 240px !important;
+    flex: 0 0 240px !important;
+  }
+
+  &.ant-layout-sider-collapsed {
+    @media only screen and (max-width: 767px) {
+      width: 0;
+      flex: 0 0 0 !important;
+    }
+  }
+
+  .isoLogoWrapper {
+    height: 70px;
+    background: darken(@isoColor--DarkBlue, 3%);
+    border-radius: 0;
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+
+    h3 {
+      a {
+        font-size: @isoFontSize * 1.5;
+        font-weight: 300;
+        line-height: 70px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #f9f9f9;
+        display: block;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.ant-layout-sider-collapsed {
+    .isoLogoWrapper {
+      padding: 0;
+
+      h3 {
+        a {
+          font-size: @isoFontSize * 2 - 1;
+          font-weight: 500;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+
+  .isoDashboardMenu {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background: transparent;
+    // height: calc(~"100vh - 70px");
+    // overflow: hidden;
+    // overflow-y: auto;
+
+    a {
+      text-decoration: none;
+    }
+
+    .ant-menu-item {
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .isoMenuHolder {
+      display: flex;
+      align-items: center;
+    }
+
+    .anticon {
+      font-size: @isoFontSize + 4;
+      margin-right: 30px;
+      color: @isoColor--LightBlue;
+      .isoTransition;
+    }
+
+    i {
+      font-size: @isoFontSize + 5;
+      color: @isoColor--LightBlue;
+      margin-right: 30px;
+      width: 18px;
+      .isoTransition;
+    }
+
+    .nav-text {
+      font-size: @isoFontSize;
+      color: @isoColor--LightBlue;
+      font-weight: 300;
+      .isoTransition;
+    }
+
+    .ant-menu-item-selected {
+      background-color: darken(@isoColor--DarkBlue, 7%);
+      .anticon {
+        color: #fff;
+      }
+
+      i {
+        color: #fff;
+      }
+
+      .nav-text {
+        color: #fff;
+      }
+    }
+
+    > li {
+      &:hover {
+        i,
+        .nav-text {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+    background: darken(@isoColor--DarkBlue, 5%);
+  }
+
+  .ant-menu-submenu-inline,
+  .ant-menu-submenu-vertical {
+    > .ant-menu-submenu-title {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+
+      > span {
+        display: flex;
+        align-items: center;
+      }
+
+      &:after {
+        content: "\f123";
+        font-family: "Ionicons" !important;
+        font-size: @isoFontSize + 2;
+        color: @isoColor--LightBlue;
+        .isoTransition;
+      }
+
+      &:hover {
+        &:after {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .ant-menu-inline,
+    .ant-menu-submenu-vertical {
+      > li:not(.ant-menu-item-group) {
+        padding-left: 74px !important;
+        font-size: @isoFontSize - 1;
+        font-weight: 300;
+        color: @isoColor--LightBlue;
+        .isoTransition;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+
+      .ant-menu-item-group {
+        padding-left: 40px;
+      }
+    }
+
+    .ant-menu-sub {
+      background-color: @isoColor--DarkBlue;
+    }
+  }
+
+  &.ant-layout-sider-collapsed {
+    .nav-text {
+      display: none;
+    }
+
+    .ant-menu-submenu-inline >  {
+      .ant-menu-submenu-title:after {
+        display: none;
+      }
+    }
+
+    .ant-menu-submenu-vertical {
+      > .ant-menu-submenu-title:after {
+        display: none;
+      }
+
+      .ant-menu-sub {
+        background-color: @isoColor--DarkBlue;
+
+        .ant-menu-item {
+          height: 35px;
+        }
+      }
+    }
+  }
+}

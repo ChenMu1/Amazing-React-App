@@ -1,0 +1,25 @@
+.isoAlgoliaContentWrapper {
+  width: calc(~"100% - 370px");
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    width: calc(~"100% - 300px");
+  }
+
+  .ais-Hits__root {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &.list {
+    .ais-Hits__root {
+      flex-direction: column;
+    }
+  }
+}

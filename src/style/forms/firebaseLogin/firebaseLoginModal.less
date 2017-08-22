@@ -1,0 +1,57 @@
+.isoFirebaseLoginModal {
+  .ant-modal-body {
+    padding: 25px 16px;
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .isoInputWrapper {
+      margin-bottom: 20px;
+
+      label {
+        font-family: @isoFontFamily;
+        font-size: @isoFontSize;
+        font-weight: 400;
+        color: @isoColor--GreyDarkText;
+        line-height: 1;
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      input {
+        &::-webkit-input-placeholder {
+          color: @isoColor--GreyShade;
+        }
+
+        &:-moz-placeholder {
+          color: @isoColor--GreyShade;
+        }
+
+        &::-moz-placeholder {
+          color: @isoColor--GreyShade;
+        }
+        &:-ms-input-placeholder {
+          color: @isoColor--GreyShade;
+        }
+      }
+    }
+
+    .isoResetPass {
+      font-family: @isoFontFamily;
+      font-size: @isoFontSize - 1;
+      font-weight: 400;
+      color: @primary-color;
+      line-height: 1;
+      cursor: pointer;
+      margin-left: auto;
+      .isoTransition;
+
+      &:hover {
+        color: darken(@primary-color, 7%);
+      }
+    }
+  }
+}

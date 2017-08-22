@@ -1,0 +1,24 @@
+.ant-dropdown-link{
+  font-family: @isoFontFamily;
+  font-size: @isoFontSize - 1;
+  color: @primary-color;
+
+  &:hover{
+    color: darken(@primary-color, 5%);
+  }
+}
+
+.ant-dropdown{
+  .ant-dropdown-menu-item,
+  .ant-dropdown-menu-submenu-title{
+    a{
+      font-family: @isoFontFamily;
+      font-size: @isoFontSize - 1;
+      color: @isoColor--GreyDarkText
+    }
+
+    &:hover{
+      background-color: @isoColor--LighterBluish;
+    }
+  }
+}

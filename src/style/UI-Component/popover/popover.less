@@ -1,0 +1,51 @@
+/* * * * * * * * * * * * * * * * * *
+POPOVER
+* * * * * * * * * * * * * * * * * */
+.ant-popover{
+  font-size: @isoFontSize - 1;
+
+  .ant-popover-inner{
+    .ant-popover-title{
+      background-color: @isoColor--GreyLighter;
+      font-size: @isoFontSize;
+      font-weight: 500;
+      color: @isoColor--GreyDarker;
+      line-height: 35px;
+      height: 35px;
+      border-bottom: 1px solid @isoColor--Border;
+      .isoBorderRadius(4px 4px 0 0)
+    }
+
+    .ant-popover-inner-content{
+      color: @isoColor--GreyText;
+
+      a{
+        color: @primary-color;
+      }
+
+      .ant-popover-message {
+        padding: 8px 0 16px;
+        font-size: @isoFontSize - 1;
+        color: @isoColor--GreyDarkText;
+
+        > .anticon {
+          color: @warning-color;
+          font-size: @isoFontSize;
+          margin-top: 1px;
+        }
+      }
+    }
+  }
+
+  &.ant-popover-placement-rightTop,
+  &.ant-popover-placement-leftTop,
+  &.ant-popover-placement-bottom,
+  &.ant-popover-placement-bottomLeft,
+  &.ant-popover-placement-bottomRight {
+    > .ant-popover-content {
+      > .ant-popover-arrow{
+        background-color: @isoColor--GreyLighter;
+      }
+    }
+  }
+}

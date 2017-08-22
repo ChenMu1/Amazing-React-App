@@ -1,0 +1,177 @@
+.isoAlgoliaGrid {
+  &.GridView {
+    width: calc(~"100% / 2 - 10px");
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background-color: #fff;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    position: relative;
+    border: 1px solid @isoColor--Border;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      width: calc(~"100% / 3 - 14px");
+
+      &:nth-child(2n) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    @media only screen and (max-width: 550px) {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+
+    .isoAlGridImage {
+      width: 100%;
+      height: 260px;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #fafafa;
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        .isoTransition;
+      }
+
+      .ant-btn {
+        &.isoAlAddToCart {
+          background-color: #ffffff;
+          border-color: #ffffff !important;
+          color: @isoColor--GreyDarker;
+          z-index: 1;
+          position: absolute;
+          height: 42px;
+          opacity: 0;
+          padding: 0 20px;
+          transform: scale(0.8);
+          .isoTransition;
+
+          i {
+            margin-right: 10px;
+            font-size: @isoFontSize;
+          }
+
+          &:hover {
+            background-color: darken(#ffffff, 5%);
+          }
+        }
+
+        &.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) {
+          .anticon {
+            margin-left: -6px;
+          }
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    .isoAlGridContents {
+      width: 100%;
+      padding: 20px 25px;
+      display: flex;
+      flex-direction: column;
+
+      @media only screen and (max-width: 991px) {
+        margin-top: 15px;
+      }
+
+      .isoAlGridName {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 5px;
+
+        .ais-Highlight__nonHighlighted {
+          font-size: @isoFontSize;
+          font-weight: 700;
+          color: @isoColor--GreyDarker;
+          line-height: 1.3;
+        }
+      }
+
+      .isoAlGridPriceRating {
+        display: flex;
+        align-items: center;
+
+        .isoAlGridPrice {
+          font-size: @isoFontSize;
+          font-weight: 400;
+          color: #ffffff;
+          padding: 5px 10px;
+          line-height: 1;
+          position: absolute;
+          top: 30px;
+          right: 0px;
+          background-color: #3369e7;
+          .isoBorderRadius(3px 0 0 3px);
+        }
+
+        .isoAlGridRating {
+          display: none;
+          .ant-rate {
+            display: flex;
+            .ant-rate-star {
+              font-size: 9px;
+              margin-right: 2px;
+            }
+          }
+        }
+      }
+
+      .isoAlGridDescription {
+        display: none;
+
+        .ais-Highlight__nonHighlighted {
+          font-size: @isoFontSize - 1;
+          font-weight: 400;
+          color: @isoColor--GreyDark;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    &:hover {
+      .isoAlGridImage {
+        &:after {
+          opacity: 1;
+        }
+
+        .isoAlAddToCart {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

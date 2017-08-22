@@ -1,0 +1,353 @@
+/* * * * * * * * * * * * * * * * * * * * *
+ANT TABLE
+* * * * * * * * * * * * * * * * * * * * */
+.isoSimpleTable,
+.isoSortingTable,
+.isoSearchableTable,
+.isoEditableTable,
+.isoGroupTable,
+.isoCustomizedTable {
+  overflow: hidden;
+  overflow-x: auto;
+
+  .ant-table-thead > tr > th {
+    color: @isoColor--LightBlue;
+    font-size: @isoFontSize - 1;
+    // background-color: transparent;
+    background-color: @isoColor--LightBluish;
+    // border-bottom: 1px solid @isoColor--Border;
+    border-bottom: 0;
+
+    &.ant-table-column-sort {
+      background: @isoColor--LightBluish;
+    }
+  }
+
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 16px 15px;
+    white-space: nowrap;
+  }
+
+  .ant-table-thead > tr > th {
+    word-break: keep-all;
+  }
+
+  .ant-table-tbody > tr > td {
+    font-size: @isoFontSize - 2;
+    color: @isoColor--GreyText;
+    border-bottom: 1px solid @isoColor--Border;
+
+    a {
+      color: @primary-color;
+      .isoTransition;
+
+      &:hover {
+        color: darken(@primary-color, 2%);
+      }
+    }
+  }
+
+  .ant-table-thead > tr.ant-table-row-hover > td,
+  .ant-table-tbody > tr.ant-table-row-hover > td,
+  .ant-table-thead > tr:hover > td,
+  .ant-table-tbody > tr:hover > td {
+    background-color: transparent;
+  }
+
+  .ant-table-bordered .ant-table-thead > tr > th {
+    border-bottom: 1px solid @isoColor--Border;
+  }
+
+  .ant-table-bordered .ant-table-thead > tr > th,
+  .ant-table-bordered .ant-table-tbody > tr > td {
+    border-right: 1px solid @isoColor--Border;
+  }
+
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    border: 1px solid @isoColor--Border;
+  }
+
+  .ant-pagination-item-active {
+    background-color: @primary-color;
+    border-color: @primary-color;
+  }
+
+  .ant-table-expanded-row {
+    background: @isoColor--GreyLighter;
+
+    p {
+      color: @isoColor--GreyText;
+    }
+  }
+
+  .ant-spin-nested-loading > div > .ant-spin {
+    max-height: none;
+
+    .ant-spin-dot i {
+      color: @primary-color;
+    }
+  }
+
+  .ant-table-header {
+    background-color: transparent;
+  }
+
+  .ant-table-title {
+    background: @isoColor--LightBluish;
+    color: @isoColor--LightBlue;
+    font-size: @isoFontSize - 1;
+    font-weight: 500;
+    padding: 16px 30px;
+    .isoBorderRadius(0);
+  }
+
+  .ant-table-footer {
+    background: @isoColor--LighterBluish;
+    color: @isoColor--LightBlue;
+    font-size: @isoFontSize - 2;
+    font-weight: 400;
+    padding: 16px 30px;
+    .isoBorderRadius(0);
+  }
+
+  .ant-table-content {
+    overflow-x: auto;
+  }
+}
+
+// Sort Table
+.isoSortingTable {
+  .ant-table-column-sorter-up.on .anticon-caret-up,
+  .ant-table-column-sorter-down.on .anticon-caret-up,
+  .ant-table-column-sorter-up.on .anticon-caret-down,
+  .ant-table-column-sorter-down.on .anticon-caret-down {
+    color: @primary-color;
+  }
+}
+
+// Filter Table
+.isoSearchableTable {
+  .ant-table-thead > tr > th > span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    i {
+      margin-left: 0;
+      margin-right: 10px;
+      order: -1;
+    }
+  }
+}
+
+.isoTableSearchBox {
+  padding: 20px;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid @isoColor--Border;
+  .isoBoxShadow(0 1px 6px rgba(0,0,0,.2););
+
+  input {
+    font-size: 14px;
+    font-weight: 400;
+    color: @isoColor--GreyText;
+    line-height: inherit;
+    height: 36px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0;
+    border: 1px solid @isoColor--DarkBluish;
+    outline: 0 !important;
+    overflow: hidden;
+    background-color: #ffffff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    .isoBorderRadius(3px 0 0 3px);
+    box-shadow: none;
+    .isoTransition;
+
+    &:focus,
+    &:hover {
+      border-color: @isoColor--Border;
+      box-shadow: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: @isoColor--GreyShade;
+    }
+
+    &:-moz-placeholder {
+      color: @isoColor--GreyShade;
+    }
+
+    &::-moz-placeholder {
+      color: @isoColor--GreyShade;
+    }
+    &:-ms-input-placeholder {
+      color: @isoColor--GreyShade;
+    }
+  }
+
+  button {
+    font-size: @isoFontSize - 2;
+    font-weight: 400;
+    padding: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: @primary-color;
+    border: 0;
+    outline: 0;
+    height: 36px;
+    padding: 0 15px;
+    margin-left: -1px;
+    cursor: pointer;
+    .isoBorderRadius(0 3px 3px 0);
+    .isoTransition;
+
+    &:hover {
+      background-color: darken(@primary-color, 4%);
+    }
+  }
+}
+
+// Group View
+.isoGroupTable {
+  .ant-table-thead > tr {
+    th {
+      border: 1px solid @isoColor--Border;
+      border-left: 0;
+
+      &[rowspan] {
+        text-align: center;
+      }
+    }
+
+    &:first-child {
+      th {
+        &:first-child {
+          border-left: 1px solid @isoColor--Border;
+        }
+      }
+    }
+
+    &:last-child {
+      th {
+        border-top: 0;
+      }
+    }
+  }
+
+  .ant-table-tbody {
+    .ant-table-row {
+      td {
+        border-right: 1px solid @isoColor--Border;
+
+        &:first-child {
+          border-left: 1px solid @isoColor--Border;
+        }
+      }
+    }
+  }
+}
+
+// Customized Table
+.isoCustomizedTable {
+  .isoCustomizedTableControlBar {
+    margin-bottom: 40px;
+
+    .ant-form-item-label {
+      label {
+        color: @isoColor--LightBlue;
+      }
+    }
+
+    .ant-switch-checked {
+      border-color: @primary-color;
+      background-color: @primary-color;
+    }
+  }
+}
+
+// Editable Table
+.isoEditableTable {
+  .ant-table-thead > tr > th > span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    i {
+      margin-left: 0;
+      margin-right: 10px;
+      order: -1;
+    }
+  }
+
+  .isoEditData {
+    .isoEditDataWrapper {
+      display: flex;
+      align-items: center;
+
+      input {
+        font-size: @isoFontSize - 2;
+        font-weight: 400;
+        color: @isoColor--GreyText;
+        line-height: inherit;
+        padding: 7px 10px;
+        margin: 0;
+        margin-right: 10px;
+        border: 1px solid @isoColor--Border;
+        outline: 0 !important;
+        overflow: hidden;
+        background-color: #ffffff;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px;
+        box-shadow: none;
+        .isoTransition;
+
+        &:focus,
+        &:hover {
+          border-color: @isoColor--Border;
+          box-shadow: none;
+        }
+
+        &::-webkit-input-placeholder {
+          color: @isoColor--GreyShade;
+        }
+
+        &:-moz-placeholder {
+          color: @isoColor--GreyShade;
+        }
+
+        &::-moz-placeholder {
+          color: @isoColor--GreyShade;
+        }
+        &:-ms-input-placeholder {
+          color: @isoColor--GreyShade;
+        }
+      }
+
+      .isoEditIcon {
+        cursor: pointer;
+      }
+    }
+
+    .isoDataWrapper {
+      display: flex;
+      align-items: center;
+
+      .isoEditIcon {
+        margin-left: auto;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

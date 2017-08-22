@@ -1,0 +1,90 @@
+.isoReactDateConfig {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+
+  .ant-form-item {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .ant-form-item-label {
+      label {
+        color: @isoColor--GreyText;
+        font-size: @isoFontSize - 1;
+      }
+    }
+  }
+}
+
+.isoReactDate {
+  height: 100vh;
+
+  .DateInput__display-text--focused {
+    background-color: @primary-color;
+    border-color: @primary-color;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .CalendarDay--selected-start,
+  .CalendarDay--selected-end,
+  .CalendarDay--selected {
+    background: @primary-color;
+    border: 1px double @primary-color;
+    color: #fff;
+
+    &.CalendarDay--hovered-span {
+      background: @primary-color;
+      border: 1px double @primary-color;
+    }
+
+    &:active {
+      background: @primary-color;
+    }
+  }
+
+  .CalendarDay--selected-span {
+    background: lighten(@primary-color, 15%);
+    border: 1px double lighten(@primary-color, 15%);
+    color: #fff;
+  }
+
+  .CalendarDay--hovered-span,
+  .CalendarDay--after-hovered-start {
+    background: lighten(@primary-color, 15%);
+    border: 1px double lighten(@primary-color, 12%);
+    color: #fff;
+
+    &:active {
+      background: @primary-color;
+    }
+
+    &.CalendarDay--hovered {
+      background: @primary-color;
+    }
+  }
+
+  .CalendarDay--selected-span.CalendarDay--hovered,
+  .CalendarDay--selected-span:active {
+    background: @primary-color;
+    border: 1px double @primary-color;
+  }
+
+  .CalendarDay--selected-span.CalendarDay--last-in-range {
+    border-right: lighten(@primary-color, 15%);
+  }
+
+  .DayPickerKeyboardShortcuts__show--bottom-right {
+    border-top: 26px solid transparent;
+    border-right: 33px solid @primary-color;
+    bottom: 0;
+    right: 0;
+  }
+}

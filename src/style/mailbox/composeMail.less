@@ -1,0 +1,90 @@
+/* * * * * * * * * * * * * * *
+COMPOSE EMAIL
+* * * * * * * * * * * * * * */
+.isoComposeMailWrapper {
+  padding: 35px;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+  .isoInputBox {
+    font-size: @isoFontSize;
+    font-weight: 400;
+    color: @isoColor--GreyDarker;
+    line-height: inherit;
+    height: 36px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    border: 1px solid @isoColor--Border;
+    outline: 0 !important;
+    overflow: hidden;
+    background-color: #ffffff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: none;
+    -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -ms-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &:focus,
+    &:hover {
+      border-color: rgba(228, 228, 228, 0.65);
+      box-shadow: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: @isoColor--GreyShade;
+    }
+
+    &:-moz-placeholder {
+      color: @isoColor--GreyShade;
+    }
+
+    &::-moz-placeholder {
+      color: @isoColor--GreyShade;
+    }
+    &:-ms-input-placeholder {
+      color: @isoColor--GreyShade;
+    }
+  }
+
+  .isoComposeMailBtnWrapper {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .isoSendMailBtn,
+    .isoCancelMailBtn {
+      height: 36px;
+      padding: 0 30px;
+      background-color: @primary-color;
+      border: 0;
+      -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -moz-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -ms-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -o-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      &:hover {
+        background-color: darken(@primary-color, 4%);
+      }
+    }
+
+    .isoCancelMailBtn {
+      background-color: @error-color;
+
+      &:hover {
+        background-color: darken(@error-color, 4%);
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+/* * * * * * * * * * * * *
+MAIL TAGS
+* * * * * * * * * * * * */
+.isoMailTagList{
+  padding: 30px 0;
+  text-align: left;
+
+  .isoSectionLabel{
+    font-size: @isoFontSize + 2;
+    font-weight: 500;
+    color: @isoColor--LightBlue;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    background-color: @isoColor--GreyLighter;
+  }
+
+  .isoMailTag{
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    padding: 0 30px;
+    align-items: center;
+    cursor: pointer;
+
+    .isoLabelIndicatorColor{
+      width: 10px;
+      height: 10px;
+      display: flex;
+      margin-left: 5px;
+      .isoBorderRadius(50%);
+    }
+
+    span{
+      font-size: @isoFontSize;
+      font-weight: 400;
+      color: @isoColor--LightBlue;
+      cursor: pointer;
+      line-height: 1.1;
+      margin-left: 20px;
+      .isoTransition;
+    }
+
+    &.active{
+      span{
+        font-weight: 500;
+        color: @primary-color;
+      }
+    }
+
+    &:hover{
+      span{
+        color: @primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+/* * * * * * * * * * * * * * * * * * * * * * *
+SORTABLE CARD
+* * * * * * * * * * * * * * * * * * * * * * */
+.isoSingleCard{
+  padding: 15px;
+  background-color: #ffffff;
+  position: relative;
+  margin-bottom: 5px;
+  .isoBoxShadow(0 0 1px rgba(0,0,0,0.15););
+
+  .isoCardImage{
+    overflow: hidden;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: @isoColor--GreyLighter;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .isoCardContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+
+    .isoCardTitle{
+      font-size: @isoFontSize;
+      font-weight: 500;
+      color: @isoColor--GreyDarker;
+      margin: 0 0 3px;
+    }
+
+    .isoCardDate{
+      font-size: @isoFontSize - 2;
+      font-weight: 400;
+      color: @isoColor--GreyShade;
+    }
+  }
+
+  .isoDeleteBtn{
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    flex-shrink: 0;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    color: @isoColor--GreyShade;
+    cursor: pointer;
+    .isoTransition;
+
+    &:hover{
+      color: @primary-color;
+    }
+  }
+
+  &.list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .isoCardImage{
+      width: 35px;
+      height: 35px;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flex;
+      display: inline-flex;
+      .isoBorderRadius(50%);
+    }
+  }
+
+  &.grid{
+    width: calc(~"100% / 3 - 15px");
+    // @media (max-width: 767px){
+      // width: calc(~"100% / 2 - 15px");
+    // }
+    display: flex;
+    flex-direction: column;
+    margin: 0 7px 15px;
+    padding: 0;
+
+    @media only screen and (max-width: 767px){
+      width: calc(~"100% / 2 - 10px");
+      margin: 0 5px 10px;
+    }
+
+    @media only screen and (max-width: 480px){
+      width: 100%;
+      margin-right: 0;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      width: calc(~"100% / 4 - 15px");
+      margin: 0 7px 15px;
+    }
+
+    .isoCardImage{
+      width: 100%;
+      height: 260px;
+      display: flex;
+
+      @media only screen and (min-width: 960px){
+        height: 330px;
+      }
+    }
+
+    .isoCardContent{
+      padding: 15px;
+      margin: 0;
+    }
+
+    .isoDeleteBtn{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+}

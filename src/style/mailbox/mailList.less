@@ -1,0 +1,124 @@
+/* * * * * * * * * * * * *
+MAIL LIST
+* * * * * * * * * * * * */
+.isoMailListWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+
+  .isoMailList {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-shrink: 0;
+    border-bottom: 1px solid @isoColor--Border;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    .isoTransition;
+
+    .isoLabelIndicator {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 15px 0 0;
+      border-color: transparent transparent transparent transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .isoRecipentsImg {
+      width: 48px;
+      height: 48px;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flex;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      .isoBorderRadius(50%);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      span {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: @isoColor--BlueShade;
+        font-size: @isoFontSize + 2;
+        font-weight: 300;
+        color: #fff;
+        letter-spacing: 1px;
+      }
+    }
+
+    .isoMailInfo {
+      width: 100%;
+      padding-left: 20px;
+
+      .infoHead {
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 3px;
+
+        .isoRecipents {
+          font-size: @isoFontSize - 1;
+          font-weight: 400;
+          color: @isoColor--LightBlue;
+        }
+
+        .isoReceiveDate {
+          font-size: @isoFontSize - 3;
+          font-weight: 400;
+          color: @isoColor--LightBlue;
+          flex-shrink: 0;
+        }
+      }
+
+      .isoSubject {
+        font-size: @isoFontSize;
+        font-weight: 500;
+        color: @isoColor--DarkerBlue;
+        margin: 0;
+      }
+    }
+
+    &.unreadMail {
+      background-color: lighten(@isoColor--LightBluish, 2%);
+    }
+
+    &:hover {
+      background-color: lighten(@isoColor--LightBluish, 2%);
+    }
+
+    &.activeMail {
+      background-color: darken(@isoColor--LightBluish, 3%);
+    }
+  }
+
+  .isoDescription {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 30px;
+    width: 100%;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,43 @@
+/* * * * * * * * * * * * * * * * * * * * *
+        CARD WIDGETS
+* * * * * * * * * * * * * * * * * * * * */
+.isoCardWidget{
+  width: 100%;
+  min-height: 126px;
+  padding: 20px 30px 20px 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+  border: 1px solid @isoColor--BorderAlt;
+  display: flex;
+  align-items: center;
+
+  .isoIconWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px 20px 20px;
+
+    i{
+      font-size: @isoFontSize * 2 + 8;
+      .isoTransition;
+    }
+  }
+
+  .isoContentWrapper{
+    .isoStatNumber{
+      font-size: @isoFontSize + 5;
+      color: @isoColor--GreyDarker;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 10px;
+    }
+
+    .isoLabel{
+      font-size: @isoFontSize;
+      color: @isoColor--GreyDark;
+      font-weight: 400;
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+}

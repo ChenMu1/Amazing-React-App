@@ -1,0 +1,74 @@
+.isoCheckoutPage {
+  .isoSectionTitle {
+    font-size: @isoFontSize + 2;
+    font-weight: 500;
+    color: @isoColor--GreyDarker;
+    line-height: 1.2;
+    padding-left: 30px;
+    margin: 20px 0 35px;
+  }
+
+  .isoLoginSection {
+    width: 100%;
+  }
+
+  .isoSectionSeperator {
+    margin: 40px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      display: flex;
+      background-color: @isoColor--GreyLight;
+    }
+
+    span {
+      font-size: @isoFontSize;
+      font-weight: 500;
+      color: @isoColor--GreyDarker;
+      line-height: 1.2;
+      padding: 0 15px;
+    }
+  }
+
+  .isoBillingAddressWrapper {
+    width: 100%;
+
+    .isoBillingSection {
+      display: flex;
+
+      @media only screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      .isoBillingForm {
+        width: 60%;
+        padding: 0 30px;
+        padding-right: 20px;
+
+        @media only screen and (max-width: 767px) {
+          width: 100%;
+          padding: 0;
+          margin-bottom: 50px;
+        }
+      }
+
+      .isoOrderInfo {
+        width: 40%;
+        padding: 0 30px;
+        padding-left: 20px;
+
+        @media only screen and (max-width: 767px) {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

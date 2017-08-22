@@ -1,0 +1,45 @@
+/* * * * * * * * * * *
+PAGINATION
+* * * * * * * * * * */
+.isoMailPagination{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+
+  button{
+    font-size: @isoFontSize + 2;
+    color: @isoColor--DarkBlue;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    outline: 0;
+    border: 1px solid @isoColor--Border;
+    cursor: pointer;
+    .isoTransition;
+
+    i{
+      font-size: 18px;
+      width: 100%;
+      height: 100%;
+      color: #2d3446;
+      .isoTransition;
+    }
+
+    &.nextPage{
+      margin-left: -1px;
+    }
+
+    &:hover{
+      color: @primary-color;
+      background-color: darken(#ffffff, 1%);
+
+      i{
+        color: @primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/* * * * * * * * * * * * * * * * * *
+ALERT
+* * * * * * * * * * * * * * * * * */
+.ant-alert {
+  color: @isoColor--GreyDarkText;
+  font-size: @isoFontSize - 2;
+
+  // .ant-alert-icon{
+  //   top: 8.5px;
+  // }
+
+  &.ant-alert-success{
+    .ant-alert-icon{
+      color: @success-color;
+    }
+  }
+
+  &.ant-alert-error{
+    .ant-alert-icon{
+      color: @error-color;
+    }
+  }
+
+  &.ant-alert-with-description{
+    .ant-alert-message{
+      font-weight: 500;
+      color: @isoColor--GreyDarker;
+    }
+
+    .ant-alert-description{
+      color: @isoColor--GreyDarkText;
+      font-size: @isoFontSize - 2;
+
+      .ant-alert-icon {
+        top: 20px;
+      }
+    }
+  }
+
+  &.ant-alert-no-icon{
+    padding: 12px 48px 12px 16px;
+  }
+}

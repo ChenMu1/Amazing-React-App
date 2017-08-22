@@ -1,0 +1,166 @@
+/* * * * * * * * * * * * * * * * * * * * *
+SIGN IN
+* * * * * * * * * * * * * * * * * * * * */
+.isoSignInPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  background: url("../../image/sign.jpg") no-repeat center center;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .isoLoginContent {
+    width: 500px;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 70px 50px;
+    position: relative;
+    z-index: 10;
+    background-color: #ffffff;
+    // .isoBorderRadius(10px);
+
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+
+    .isoLogoWrapper {
+      width: 100%;
+      display: flex;
+      margin-bottom: 50px;
+      justify-content: center;
+      flex-shrink: 0;
+
+      a {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1;
+        text-transform: uppercase;
+        color: @isoColor--LightBlue;
+      }
+    }
+
+    .isoSignInForm {
+      width: 100%;
+      display: flex;
+      flex-shrink: 0;
+      flex-direction: column;
+
+      .isoInputWrapper {
+        margin-bottom: 15px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        input {
+          &::-webkit-input-placeholder {
+            color: @isoColor--GreyShade;
+          }
+
+          &:-moz-placeholder {
+            color: @isoColor--GreyShade;
+          }
+
+          &::-moz-placeholder {
+            color: @isoColor--GreyShade;
+          }
+          &:-ms-input-placeholder {
+            color: @isoColor--GreyShade;
+          }
+        }
+      }
+
+      .isoHelperWrapper {
+        margin-top: 35px;
+        flex-direction: column;
+      }
+
+      .isoOtherLogin {
+        padding-top: 40px;
+        margin-top: 35px;
+        border-top: 1px dashed @isoColor--Grey;
+
+        > a {
+          display: flex;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        button {
+          width: 100%;
+          height: 42px;
+          border: 0;
+          font-weight: 500;
+
+          &.btnFacebook {
+            background-color: #3b5998;
+
+            &:hover {
+              background-color: darken(#3b5998, 5%);
+            }
+          }
+
+          &.btnGooglePlus {
+            background-color: #dd4b39;
+            margin-top: 15px;
+
+            &:hover {
+              background-color: darken(#dd4b39, 5%);
+            }
+          }
+
+          &.btnAuthZero {
+            background-color: #e14615;
+            margin-top: 15px;
+
+            &:hover {
+              background-color: darken(#e14615, 5%);
+            }
+          }
+
+          &.btnFirebase {
+            background-color: @isoColor--Yellow;
+            margin-top: 15px;
+
+            &:hover {
+              background-color: darken(@isoColor--Yellow, 5%);
+            }
+          }
+        }
+      }
+
+      .isoForgotPass {
+        font-size: 12px;
+        color: @isoColor--GreyText;
+        margin-bottom: 10px;
+
+        &:hover {
+          color: @primary-color;
+        }
+      }
+
+      button {
+        font-weight: 500;
+      }
+    }
+  }
+}

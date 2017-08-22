@@ -1,0 +1,196 @@
+/* * * * * * * * * * * * * * * * * * *
+BOX
+* * * * * * * * * * * * * * * * * * */
+.isomorphicSingleCardHolder{
+  > div{
+    // height: 100%;
+
+    .isomorphicSingleCard{
+      height: 100%;
+    }
+  }
+}
+
+.isoCardBoxContentWrapper{
+  width: 100%;
+  padding: 50px;
+
+  @media only screen and (max-width: 767px){
+    padding: 35px 20px;
+  }
+}
+
+.isoCardBox{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 1px solid @isoColor--Border;
+  padding: 25px 35px;
+  .isoTransition;
+
+  &:hover{
+    .isoBoxShadow(0 0 8px rgba(41,41,41,0.2););
+
+    .isoCardBoxHeader{
+      .isoCardControl{
+        opacity: 1;
+      }
+    }
+  }
+
+  .isoCardBoxHeader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    h3{
+      font-size: @isoFontSize;
+      font-weight: 500;
+      color: @isoColor--GreyDarker;
+      margin: 0;
+      padding-right: 10px;
+    }
+
+    .isoCardControl{
+      display: flex;
+      margin-left: auto;
+      flex-shrink: 0;
+      opacity: 0;
+      .isoTransition;
+
+      button{
+        width: 24px;
+        height: 24px;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flex;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        background-color: transparent;
+        font-size: @isoFontSize;
+        font-weight: 400;
+        color: @isoColor--GreyDarker;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        cursor: pointer;
+        .isoTransition;
+
+        &:hover{
+          color: @primary-color;
+        }
+
+        &.isoDragBox{
+          cursor: move; /* fallback if grab cursor is unsupported */
+          cursor: grab;
+          cursor: -moz-grab;
+          cursor: -webkit-grab;
+
+          &:active{
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+          }
+        }
+      }
+
+    }
+  }
+
+  .isoCardBoxBody{
+    margin-top: 20px;
+
+    p{
+      font-size: @isoFontSize;
+      font-weight: 400;
+      color: @isoColor--GreyText;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    h3{
+      font-size: @isoFontSize + 4;
+      font-weight: 700;
+      color: @isoColor--GreyText;
+    }
+
+    input{
+      font-size: 14px;
+      font-weight: 400;
+      color: @isoColor--GreyDark;
+      line-height: inherit;
+      height: 36px;
+      width: 100%;
+      padding: 0 15px;
+      margin: 0;
+      border: 1px solid @isoColor--Border;
+      outline: 0 !important;
+      overflow: hidden;
+      background-color: #ffffff;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      box-shadow: none;
+      .isoTransition;
+
+      // &:focus,
+      // &:hover{
+      //   border-color: @isoColor--Border;
+      //   box-shadow: none;
+      // }
+
+      &:focus{
+        border-color: @primary-color;
+        outline: 0;
+        box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+      }
+
+      &:hover{
+        border-color: @primary-color;
+      }
+
+      &::-webkit-input-placeholder {
+        color:@isoColor--GreyShade;
+      }
+
+      &:-moz-placeholder {
+        color:@isoColor--GreyShade;
+      }
+
+      &::-moz-placeholder {
+        color:@isoColor--GreyShade;
+      }
+      &:-ms-input-placeholder {
+        color:@isoColor--GreyShade;
+      }
+    }
+
+    button{
+      font-size: @isoFontSize - 2;
+      font-weight: 400;
+      padding: 0;;
+      text-transform: uppercase;
+      color: #ffffff;
+      background-color: @primary-color;
+      border: 0;
+      outline: 0;
+      height: 30px;
+      padding: 0 15px;
+      margin-left: auto;
+      cursor: pointer;
+      .isoBorderRadius(3px);
+      .isoTransition;
+
+      &:hover{
+        background-color: darken(@primary-color, 4%);
+      }
+    }
+  }
+}

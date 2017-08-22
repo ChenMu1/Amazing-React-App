@@ -1,0 +1,38 @@
+.isoButtonWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 10px 0 30px;
+}
+
+.isoCardWrapper {
+  margin-bottom: 20px;
+
+  .jp-card-container {
+    margin: 40px auto 60px;
+  }
+}
+
+.isoCardInfoForm {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .isoCardInput {
+    margin-bottom: 10px;
+
+    &.name {
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    &.expiry,
+    &.cvc {
+      width: calc(~"100% / 2 - 5px");
+    }
+
+    &.expiry {
+      margin-right: 10px;
+    }
+  }
+}

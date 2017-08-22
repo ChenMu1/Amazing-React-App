@@ -1,0 +1,284 @@
+/* * * * * * * * * * * * * * * *
+TODO LIST
+* * * * * * * * * * * * * * * */
+.isoTodoContent{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .isoTodoStatusTab{
+    margin-bottom: 20px;
+    display: flex;
+
+    .isoTodoStatus{
+      margin-left: auto;
+
+      .ant-radio-button-wrapper {
+        margin: 0;
+        height: auto;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.65);
+        display: inline-block;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 0;
+        background: transparent;
+        padding: 0 15px;
+        // margin-right: 25px;
+        .isoBoxShadow(none);
+
+        &:last-child{
+          padding-right: 0;
+        }
+
+        &:first-child{
+          padding-left: 0;
+        }
+
+        span{
+          font-size: @isoFontSize;
+          font-weight: 400;
+          color: @isoColor--GreyText;
+        }
+      }
+
+      .ant-radio-button-wrapper-checked{
+        span{
+          color: @primary-color;
+        }
+      }
+    }
+  }
+
+  .isoTodoListWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .isoTodoList{
+      width: 100%;
+      padding: 20px 15px 20px 0;
+      overflow: hidden;
+      margin: 0 0 15px;
+      background: #ffffff;
+      border: 1px solid @isoColor--Border;
+      display: flex;
+      align-items: flex-start;
+      text-align: left;
+      position: relative;
+
+      .isoColorChooser{
+        width: 5px;
+        height: 100%;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        flex-shrink: 0;
+        margin-right: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .isoBorderRadius(0);
+        .isoTransition(0.25s);
+      }
+
+      .ant-checkbox-wrapper{
+        line-height: 1;
+        margin-right: 15px;
+        margin-left: 25px;
+
+        .ant-checkbox-inner{
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+      .isoTodoContentWrapper{
+        width: 100%;
+        padding-right: 30px;
+        position: relative;
+
+        .isoTodoDate{
+          font-size: @isoFontSize - 2;
+          font-weight: 400;
+          color: @isoColor--GreyShade;
+          line-height: inherit;
+          display: flex;
+          margin-bottom: 10px;
+          text-transform: capitalize;
+        }
+
+        .isoNoteContent{
+          width: 100%;
+          display: flex;
+
+          .isoNoteTextWrapper{
+            font-size: @isoFontSize;
+            font-weight: 400;
+            color: @isoColor--GreyDarker;
+            line-height: 24px;
+          }
+
+          .isoNoteEditWrapper{
+            width: 100%;
+            display: flex;
+
+            textarea{
+              font-size: 14px;
+              font-weight: 400;
+              color: @isoColor--GreyDarker;
+              line-height: 24px;
+              height: 210px;
+              padding: 10px 15px;
+              margin: 0;
+              border: 0;
+              outline: 0 !important;
+              background-color: #ffffff;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+              -webkit-border-radius: 3px;
+              -moz-border-radius: 3px;
+              -o-border-radius: 3px;
+              border-radius: 3px;
+              box-shadow: none;
+              box-sizing: content-box;
+              resize: vertical;
+              .isoTransition;
+
+              &:focus{
+                border-color: @primary-color;
+                outline: 0;
+                box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+              }
+
+              &:hover{
+                border-color: @primary-color;
+              }
+
+              &::-webkit-input-placeholder {
+                color:@isoColor--GreyShade;
+              }
+
+              &:-moz-placeholder {
+                color:@isoColor--GreyShade;
+              }
+
+              &::-moz-placeholder {
+                color:@isoColor--GreyShade;
+              }
+              &:-ms-input-placeholder {
+                color:@isoColor--GreyShade;
+              }
+            }
+          }
+        }
+      }
+
+      .isoTodoDelete,
+      .isoNoteEditIcon{
+        font-size: @isoFontSize + 2;
+        color: @isoColor--DarkBlue;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background-color: #ffffff;
+        outline: 0;
+        padding: 0;
+        border: 1px solid @isoColor--Border;
+        margin-left: -1px;
+        cursor: pointer;
+        .isoTransition;
+        .isoBorderRadius(0);
+
+        &:first-child{
+          margin-left: 0;
+        }
+
+        &:hover{
+          color: @primary-color;
+          background-color: darken(#ffffff, 1%);
+        }
+      }
+
+      .isoNoteEditIcon{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .isoNoTodoFound{
+      font-size: @isoFontSize + 7;
+      font-weight: 300;
+      padding: 0;;
+      text-transform: uppercase;
+      color: @isoColor--GreyText;
+      width: 100%;
+      text-align: center;
+      margin: 50px 0;
+    }
+  }
+
+  .isoTodoFooter{
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .isoTodoCheckAll{
+      display: -webkit-inline-flex;
+      display: -ms-inline-flex;
+      display: inline-flex;
+      align-items: center;
+
+      .ant-checkbox{
+        .ant-checkbox-inner{
+          width: 15px;
+          height: 15px;
+        }
+
+        &.ant-checkbox-disabled{
+          .ant-checkbox-inner{
+            border-color: @isoColor--Grey;
+
+            &:after{
+              border-color: @isoColor--Grey;
+            }
+          }
+        }
+      }
+
+      span{
+        font-size: @isoFontSize - 1;
+        line-height: 1;
+        color: @isoColor--GreyText;
+      }
+    }
+
+    .isoDeleteAll{
+      background-color: @primary-color;
+      border: 0;
+      height: 30px;
+      padding: 0 15px;
+      .isoBorderRadius(3px);
+      .isoTransition;
+
+      span{
+        font-size: @isoFontSize - 2;
+        font-weight: 400;
+        padding: 0;;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+
+      &:hover{
+        background-color: darken(@primary-color, 4%);
+      }
+    }
+  }
+
+}

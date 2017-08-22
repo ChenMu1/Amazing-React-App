@@ -1,0 +1,140 @@
+/* * * * * * * * * * * * * * *
+TRANSFER
+* * * * * * * * * * * * * * */
+.isomorphicTransfer{
+  display: flex;
+
+  @media only screen and (max-width: 560px){
+    flex-direction: column;
+  }
+
+
+  .ant-transfer-list {
+    font-size: @isoFontSize - 1;
+    border: 1px solid @isoColor--Border;
+    background-color: #ffffff;
+    display: inline-block;
+    border-radius: 5px;
+    vertical-align: middle;
+    position: relative;
+    width: 180px;
+    height: 200px;
+    padding-top: 33px;
+
+    .ant-transfer-list-header {
+      padding: 7px 15px;
+      border-radius: 5px 5px 0 0;
+      background: @isoColor--LightBluish;
+      color: @isoColor--GreyDarkText;
+      border-bottom: 1px solid @isoColor--Border;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      .ant-transfer-list-header-selected{
+        color: @isoColor--GreyDarkText;
+        font-size: @isoFontSize - 2;
+      }
+    }
+
+    .ant-transfer-list-body{
+      padding-top: 38px;
+      .ant-transfer-list-body-search-wrapper{
+        padding: 5px;
+
+        .ant-input {
+          &.ant-transfer-list-search{
+            font-size: @isoFontSize - 1;
+            font-weight: 400;
+            color: @isoColor--GreyDark;
+            line-height: inherit;
+            padding: 4px 10px;
+            height: 28px;
+            border: 1px solid @isoColor--Border;
+            outline: 0 !important;
+            overflow: hidden;
+            background-color: #ffffff;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            box-shadow: none;
+            -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+               -moz-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+                -ms-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+                 -o-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+                    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+            &:focus,
+            &:hover{
+              border-color: @isoColor--Border;
+              box-shadow: none;
+            }
+
+            &::-webkit-input-placeholder {
+              color: @isoColor--GreyShade;
+            }
+
+            &:-moz-placeholder {
+              color: @isoColor--GreyShade;
+            }
+
+            &::-moz-placeholder {
+              color: @isoColor--GreyShade;
+            }
+            &:-ms-input-placeholder {
+              color: @isoColor--GreyShade;
+            }
+          }
+        }
+      }
+
+      .ant-transfer-list-content-item{
+        span{
+          font-size: @isoFontSize - 2;
+          color: @isoColor--LightBlue;
+        }
+
+        &:not(.ant-transfer-list-content-item-disabled){
+          &:hover {
+              cursor: pointer;
+              background-color: @isoColor--LightBluish;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-transfer-operation{
+    @media only screen and (max-width: 560px){
+      margin: 15px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+    }
+    .ant-btn-primary {
+      color: #fff;
+      background-color: @primary-color;
+      border-color: @primary-color;
+      padding: 0 8px;
+    }
+
+    .ant-btn-primary.disabled, .ant-btn-primary[disabled], .ant-btn-primary.disabled:hover, .ant-btn-primary[disabled]:hover, .ant-btn-primary.disabled:focus, .ant-btn-primary[disabled]:focus, .ant-btn-primary.disabled:active, .ant-btn-primary[disabled]:active, .ant-btn-primary.disabled.active, .ant-btn-primary[disabled].active{
+      color: #D8D8D8;
+      background-color: @isoColor--GreyLight;
+      border-color: @isoColor--Border;
+    }
+  }
+
+  .ant-transfer-list-search-action {
+    width: 28px;
+    line-height: 28px;
+  }
+}

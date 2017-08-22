@@ -1,0 +1,40 @@
+.isoProgressWidget{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+  border: 1px solid @isoColor--BorderAlt;
+
+  .isoProgressWidgetTopbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    h3{
+      font-size: @isoFontSize + 5;
+      color: @isoColor--GreyDarker;
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    i{
+      font-size: @isoFontSize + 10;
+      .isoTransition;
+    }
+  }
+
+  .isoProgressWidgetBody{
+    p{
+      font-size: @isoFontSize;
+      color: @isoColor--GreyText;
+      font-weight: 300;
+      width: 100%;
+      margin: 0 0 5px;
+    }
+  }
+}

@@ -1,0 +1,221 @@
+/* * * * * * * * * * * * * * * * *
+SINGLE MAIL
+* * * * * * * * * * * * * * * * */
+.isoSingleMailContents{
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.isoSingleMail{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+
+  .isoMailHeader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    flex-shrink: 0;
+    border-bottom: 1px solid @isoColor--Border;
+
+    @media only screen and (max-width: 767px){
+      padding: 35px 20px;
+    }
+
+    h2{
+      font-size: @isoFontSize + 4;
+      font-weight: 400;
+      color: @isoColor--LightBlue;
+      line-height: 1.5;
+      margin: 0;
+      text-align: left;
+    }
+
+    .label{
+      font-size: @isoFontSize - 2;
+      font-weight: 400;
+      color: #ffffff;
+      line-height: 1;
+      padding: 0 15px;
+      height: 25px;
+      line-height: 25px;
+      background-color: @primary-color;
+      text-transform: capitalize;
+      margin-left: 25px;
+    }
+  }
+
+  .isoMailInfo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 25px 35px;
+    border-bottom: 1px solid @isoColor--Border;
+
+    @media only screen and (max-width: 767px){
+      padding: 25px 20px;
+    }
+
+    .isoRecipentsImg{
+      width: 48px;
+      height: 48px;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flex;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      .isoBorderRadius(50%);
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      span{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: @isoColor--BlueShade;
+        font-size: @isoFontSize + 2;
+        font-weight: 300;
+        color: #fff;
+        letter-spacing: 1px;
+      }
+    }
+
+    .isoMailAddress{
+      width: 100%;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      .isoAddress{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        position: relative;
+
+        h3{
+          font-size: @isoFontSize;
+          font-weight: 700;
+          color: @isoColor--GreyDarker;
+          line-height: 1.1;
+          margin: 0 0 8px;
+
+          @media only screen and (max-width: 767px){
+            line-height: 1.5;
+          }
+
+          span{
+            font-size: inherit;
+            font-weight: 400;
+            color: @isoColor--LightBlue;
+            padding-left: 5px;
+          }
+        }
+
+        .mailDate{
+          font-size: @isoFontSize - 1;
+          font-weight: 400;
+          color: @isoColor--LightBlue;
+          flex-shrink: 0;
+
+          @media only screen and (max-width: 767px){
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+
+      p{
+        font-size: @isoFontSize - 1;
+        font-weight: 400;
+        color: @isoColor--LightBlue;
+        line-height: 1.1;
+
+        span{
+          font-size: inherit;
+          font-weight: 700;
+          color: @isoColor--GreyDarker;
+        }
+      }
+    }
+  }
+
+  .isoMailBody{
+    padding: 30px 35px;
+    text-align: left;
+    flex-shrink: 0;
+    border-bottom: 1px solid @isoColor--Border;
+
+    @media only screen and (max-width: 767px){
+      padding: 30px 20px;
+    }
+
+    p{
+      font-size: @isoFontSize;
+      font-weight: 400;
+      color: @isoColor--GreyText;
+      line-height: 1.5;
+      margin-bottom: 21px;
+    }
+  }
+
+  .isoReplyMail{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    flex-shrink: 0;
+
+    @media only screen and (max-width: 767px){
+    padding: 35px 20px;
+    }
+
+    .isoComposeMailWrapper{
+      padding: 0;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .isoReplyMailBtn{
+      width: 100%;
+      height: 80px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: @isoFontSize;
+      color: @isoColor--GreyDark;
+      border: 1px solid @isoColor--Border;
+      padding: 10px 15px;
+
+      span{
+        font-size: inherit;
+        color: @isoColor--GreyDark;
+        text-decoration: underline;
+        padding-left: 3px;
+        cursor: pointer;
+        .isoTransition;
+
+        &:hover{
+          color: @primary-color;
+        }
+      }
+    }
+  }
+}

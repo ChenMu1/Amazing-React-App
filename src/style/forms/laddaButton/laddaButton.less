@@ -1,0 +1,85 @@
+/* * * * * * * * * * * * * * * * * * * * *
+LADDA BUTTON
+* * * * * * * * * * * * * * * * * * * * */
+.ladda-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  font-weight: 500;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 1.5;
+  padding: 10px 30px;
+  font-size: @isoFontSize;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  position: relative;
+  color: #ffffff;
+  background-color: @primary-color;
+  .isoTransition;
+
+  &:hover{
+    background-color: lighten(@primary-color, 8%);
+    border-color: lighten(@primary-color, 8%);
+  }
+
+  .ladda-label{
+    font-size: @isoFontSize;
+  }
+
+  &[data-size=xl]{
+    .ladda-label{
+      font-size: @isoFontSize + 4;
+    }
+  }
+
+  &[data-size=l]{
+    .ladda-label {
+      font-size: @isoFontSize + 1;
+    }
+  }
+
+  &[data-size=s]{
+    padding: 6px 15px;
+
+    .ladda-label {
+      font-size: @isoFontSize - 1;
+    }
+  }
+
+  &[data-size=xs] {
+    padding: 4px 10px;
+    .ladda-label {
+      font-size: @isoFontSize - 3;
+    }
+  }
+
+  &[data-style=contract] {
+      overflow: hidden;
+      width: auto;
+  }
+
+
+  &[data-loading]{
+    background-color: darken(@primary-color, 3%);
+    border-color: darken(@primary-color, 3%);
+
+    &:hover{
+      background-color: darken(@primary-color, 3%);
+      border-color: darken(@primary-color, 3%);
+    }
+  }
+
+}

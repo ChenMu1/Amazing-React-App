@@ -1,0 +1,24 @@
+.isoSocialWidgetWrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  li{
+    line-height: 1;
+    &:nth-child(n+2){
+      margin-left: 15px;
+    }
+
+    a{
+      display: flex;
+      line-height: 1;
+      opacity: 0.8;
+      font-size: @isoFontSize + 5;
+      .isoTransition;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}

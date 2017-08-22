@@ -1,0 +1,141 @@
+/* * * * * * * * * * * * * * * * *
+SINGLE MAIL ACTIONS
+* * * * * * * * * * * * * * * * */
+.isoMailActionsController{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 30px;
+  background-color: @isoColor--GreyLighter;
+  border-bottom: 1px solid @isoColor--Border;
+
+  @media only screen and (max-width: 767px){
+    padding: 0 15px;
+    height: 60px;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+
+  .mailBackBtn{
+    color: @isoColor--DarkBlue;
+    width: auto;
+    height: 35px;
+    padding: 0 10px;
+    font-size: @isoFontSize;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    outline: 0;
+    border: 1px solid @isoColor--Border;
+    margin-left: -1px;
+    cursor: pointer;
+    margin-right: 15px;
+    .isoTransition;
+
+    @media only screen and (max-width: 479px){
+      margin-right: 5px;
+    }
+
+    i{
+      font-size: @isoFontSize + 2;
+      color: @isoColor--DarkBlue;
+      .isoTransition;
+    }
+
+    &:hover{
+      color: @primary-color;
+      background-color: darken(#ffffff, 1%);
+
+      i{
+        color: @primary-color;
+      }
+    }
+  }
+
+  .isoMailActions{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+
+    button{
+      font-size: @isoFontSize + 2;
+      color: @isoColor--DarkBlue;
+      text-align: center;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      outline: 0;
+      border: 1px solid @isoColor--Border;
+      margin-left: -1px;
+      cursor: pointer;
+      .isoTransition;
+
+      i{
+        font-size: @isoFontSize + 2;
+        color: @isoColor--DarkBlue;
+        width: 100%;
+        .isoTransition;
+      }
+
+      &:first-child{
+        margin-left: 0;
+      }
+
+      &:hover{
+        color: @primary-color;
+        background-color: darken(#ffffff, 1%);
+
+        i{
+          color: @primary-color;
+        }
+      }
+
+      &.mailBackBtn{
+        width: auto;
+        padding: 0 10px;
+        font-size: @isoFontSize;
+      }
+    }
+  }
+
+  .isoMailMove{
+    .isoMailActions();
+    margin-left: 20px;
+
+    @media only screen and (max-width: 767px){
+      margin-left: auto;
+      margin-right: 10px;
+    }
+
+    @media only screen and (max-width: 479px){
+      margin-right: 5px;
+    }
+  }
+
+  .isoSingleMailPagination{
+    .isoMailActions();
+    margin-left: auto;
+  }
+
+}
+
+.mailMoveDropdown{
+  .ant-popover-inner-content{
+    li{
+      cursor: pointer;
+      padding: 3px 0;
+
+      &:hover{
+        color: @primary-color;
+      }
+    }
+  }
+}
