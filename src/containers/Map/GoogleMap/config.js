@@ -214,11 +214,11 @@ const posts = [
   },
   {
     ID: 3,
-    title: 'Astoria Cafe',
-    location: 'Astoria Park, NY',
+    title: 'City Gallery Wellington',
+    location: '101 Wakefield St, Wellington',
     img: infoWindowImg3,
-    lat: 40.779668,
-    lng: -73.921589,
+    lat: -41.288244, 
+    lng: 174.777240,
     marker: {
       borderStyle: 'double',
       borderColor: 'green',

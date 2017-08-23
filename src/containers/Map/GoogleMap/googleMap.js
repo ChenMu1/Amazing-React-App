@@ -13,7 +13,7 @@ export default class GoogleMap extends Component {
     const { rowStyle, colStyle, gutter } = basicStyle;
     return (
       <LayoutWrapper>
-        <PageHeader>Google Map New Zealand</PageHeader>
+        <PageHeader>Google Map Wellington</PageHeader>
         <Row style={rowStyle} gutter={gutter} justify="start">
           <Col md={24} sm={24} xs={24} style={colStyle}>
             <Box>
