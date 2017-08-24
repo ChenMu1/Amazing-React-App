@@ -229,7 +229,7 @@ const posts = [
   {
     ID: 4,
     title: 'Meow',
-    location: 'Edward Street, Wellington',
+    location: '9 Edward Street, Wellington',
     img: infoWindowImg4,
     lat: -41.290678,
     lng: 174.774778,
