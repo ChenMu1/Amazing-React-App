@@ -335,9 +335,9 @@ export default class IsoWidgets extends Component {
                 style={{ height: "450px" }}
                 src={userpic}
                 alt="Jhon"
-                name="Jhon Doe"
-                title="Sr. iOS Developer"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ammet dolar consectetur adipisicing elit,"
+                name="Chen Mu"
+                title="Developer"
+                description="Good, better, best. Never let it rest. Until your good is better, and your better is best."
               >
                 <SocialWidget>
                   <SocialProfile
