@@ -21,7 +21,7 @@ export default class extends Component {
               subtitle="Simplest Usage. Badge will be hidden when count is 0, but we can use showZero to show it."
             >
               <ContentHolder>
-                <Badge count={5}>
+                <Badge count={4}>
                   <a className="isoBadgeLink"> </a>
                 </Badge>
                 <Badge count={0} showZero>
